@@ -2,14 +2,7 @@ const app = require("express")();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const corsOptions = {
-  origin:
-    "http://your-website.comhttps://main--deft-daffodil-8aaf5d.netlify.app", // Replace with the actual origin of your website
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true, // Allow cookies and credentials to be sent with the request
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 
 let arr = [];
